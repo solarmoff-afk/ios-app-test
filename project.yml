@@ -1,6 +1,11 @@
 name: MyApp
 options:
   bundleIdPrefix: com.example
+
+settings:
+  base:
+    GENERATE_INFOPLIST_FILE: YES
+
 targets:
   MyApp:
     type: application
@@ -15,6 +20,7 @@ targets:
   MyAppUITests:
     type: bundle.ui-testing
     platform: iOS
+    deploymentTarget: "16.0"
     sources: [Sources/UITests]
     dependencies:
       - target: MyApp
